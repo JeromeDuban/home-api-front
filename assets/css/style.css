@@ -1,0 +1,11 @@
+body{
+	background-color: #454545;
+	color:white;
+}
+
+.box{
+	background-color: blue;
+	display: inline-block;
+	margin: 0 10px 0 10px;
+	padding: 0 10px 0 10px;
+}

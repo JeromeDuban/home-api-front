@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+		<link rel="stylesheet" href="assets/css/style.css"> 
+	</head>
+	<body>
+
+		<div ng-app="homeAPI" ng-controller="homeController">
+
+			<div id="container">
+				<p>{{theTime}}</p>
+				<div ng-repeat="p in devices" class="box">
+					<p>{{p.label}}</p>
+					IP : {{p.ip}}<br/>
+					Statut : {{p.status ? "En ligne" : "Hors ligne"}}
+				</div>
+			</div>
+
+		</div>
+
+		<script src="app/app.module.js"></script>
+		<!--<script src="app/app.routes.js"></script>-->
+		<script src="app/components/home/homeController.js"/>
+
+		<script>
+			var config = {headers:  {
+			        'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplamVmY2diIiwiaWF0IjoxNTE4NDcwODM0LCJleHAiOjE1MTg1NTcyMzR9.B71F_XyFfkNt4hn59BWQH5lN0XcnAJAJLBNVj_CBtts'
+			    }
+			};
+		</script>
+
+	</body>
+</html>
