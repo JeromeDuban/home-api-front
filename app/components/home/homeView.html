@@ -1,0 +1,12 @@
+<div ng-app="homeAPI" ng-controller="homeController">
+
+	<div id="container">
+		<p>{{theTime}}</p>
+		<div ng-repeat="p in devices" class="box">
+			<p>{{p.label}}</p>
+			IP : {{p.ip}}<br/>
+			Statut : {{p.status ? "En ligne" : "Hors ligne"}}
+		</div>
+	</div>
+
+</div>

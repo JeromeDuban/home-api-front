@@ -15,6 +15,7 @@ app.controller('homeController', function($scope,$http,$interval) {
 });
 
 
+
 function getStatus($scope, $http, $interval){
 
 	var status = function (){

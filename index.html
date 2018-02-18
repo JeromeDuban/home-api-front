@@ -2,12 +2,16 @@
 <html>
 	<head>
 		<meta charset="utf-8"/>
-		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.7/angular-route.js"></script>
 		<link rel="stylesheet" href="assets/css/style.css"> 
 	</head>
 	<body>
 
-		<div ng-app="homeAPI" ng-controller="homeController">
+		<div ng-view></div>
+
+
+		<!--<div ng-app="homeAPI" ng-controller="homeController">
 
 			<div id="container">
 				<p>{{theTime}}</p>
@@ -18,10 +22,10 @@
 				</div>
 			</div>
 
-		</div>
+		</div>-->
 
 		<script src="app/app.module.js"></script>
-		<!--<script src="app/app.routes.js"></script>-->
+		<script src="app/app.routes.js"></script>
 		<script src="app/components/home/homeController.js"/>
 
 		<script>
