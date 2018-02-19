@@ -15,6 +15,10 @@ app.controller('homeController', function($scope,$http,$interval) {
 });
 
 
+var config = {headers:  {
+        'x-access-token': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImplamVmY2diIiwiaWF0IjoxNTE5MDc4ODU3LCJleHAiOjE1MTkxNjUyNTd9.kxL9BCC4kG_oh7G0U-Cp58aQ1sTzptgWHOCyLT2Fb-s'
+    }
+};
 
 function getStatus($scope, $http, $interval){
 
@@ -28,15 +32,15 @@ function getStatus($scope, $http, $interval){
 					if (response.data.success){
 						value.status = response.data.status;
 					}
-					console.log(value);
+					//console.log(value);
 				},
 				function(data) {
-			      console.log(data);
+			      //console.log(data);
 			    }
 			);
 		});
 	}
 
 	status();
-	$interval(status, 5*1000);
+	$interval(status, 30*1000);
 };
