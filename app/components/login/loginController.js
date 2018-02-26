@@ -1,3 +1,6 @@
 app.controller('loginController', ['$scope', function($scope) {
-  $scope.text = "Catch em All!";
+  $scope.validate = function() {
+        console.log($scope.login);
+        console.log($scope.password);
+    };
 }]);

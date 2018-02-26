@@ -1,6 +1,13 @@
 <div>
 	<div id="container">
 		<h1>Login View</h1>
-		{{text}}
+	    <form novalidate>
+		    Login:<br>
+		    <input type="text" ng-model="login"><br>
+		    Password:<br>
+		    <input type="text" ng-model="password">
+		    <br><br>
+		    <button ng-click="validate()">Valider</button>
+	    </form>
 	</div>
 </div>
