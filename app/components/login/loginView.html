@@ -2,11 +2,11 @@
 	<div id="container">
 		<h1>Login View</h1>
 	    <form novalidate>
-		    Login:<br>
-		    <input type="text" ng-model="login"><br>
-		    Password:<br>
-		    <input type="text" ng-model="password">
-		    <br><br>
+		    <input type="text" placeholder="Login" ng-model="login"><br/>
+		    <br/>
+		    <input type="password" placeholder="Password" ng-model="password"><br/>
+		    <br/>
+		    {{message}}<br/>
 		    <button ng-click="validate()">Valider</button>
 	    </form>
 	</div>
