@@ -1,4 +1,4 @@
-app.controller('homeController', function($scope,$http,$interval) {
+app.controller('homeController', ['$scope','$http','$interval',function($scope,$http,$interval) {
 				
 	// Heure
     $scope.theTime = new Date().toLocaleTimeString();
@@ -12,7 +12,7 @@ app.controller('homeController', function($scope,$http,$interval) {
 	   getStatus($scope, $http, $interval);
 	});
 
-});
+}]);
 
 
 var config = {headers:  {
@@ -32,10 +32,10 @@ function getStatus($scope, $http, $interval){
 					if (response.data.success){
 						value.status = response.data.status;
 					}
-					//console.log(value);
+					console.log(value);
 				},
 				function(data) {
-			      //console.log(data);
+			      console.log(data);
 			    }
 			);
 		});
