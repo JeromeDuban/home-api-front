@@ -1,1 +1,1 @@
-var app = angular.module('homeAPI', ['ngRoute']);
+var app = angular.module('homeAPI', ['ngRoute','ngStorage']);
